@@ -1,6 +1,12 @@
 package br.com.academico.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity(name="nota")
 public class NotaModel {
+@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 private Integer nota_id;
 private Integer aluno_id;
 private double  valor;

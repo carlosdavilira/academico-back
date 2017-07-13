@@ -1,6 +1,12 @@
 package br.com.academico.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity(name="avaliacao")
 public class AvaliacaoModel {
+@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 private Integer avaliacao_id;
 private Integer curso_id;
 private String tipo;

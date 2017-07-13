@@ -1,6 +1,12 @@
 package br.com.academico.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity(name="frequencia")
 public class FrequenciaModel {
+@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 private Integer frequencia_id;
 private Integer aula_id;
 private Integer aluno_id;

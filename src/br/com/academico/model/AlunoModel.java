@@ -1,13 +1,18 @@
 package br.com.academico.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity(name="aluno")
 public class AlunoModel {
+@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 private Integer aluno_id;
 private String nomes;
 private String telefone;
 private String celular;
 private Integer curso_id;
 private Integer historico;
-
 
 public Integer getAluno_id() {
 	return aluno_id;

@@ -1,6 +1,12 @@
 package br.com.academico.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity(name="historico")
 public class HistoricoModel {
+@Id @GeneratedValue(strategy=GenerationType.IDENTITY)	
 private Integer historico_id;
 private Integer aluno_id;
 private String data_inicio;

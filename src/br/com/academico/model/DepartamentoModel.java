@@ -1,7 +1,12 @@
 package br.com.academico.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity(name="departamento")
 public class DepartamentoModel {
-
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer departamento_id;
 	private String nome;
 	private String descricao;
