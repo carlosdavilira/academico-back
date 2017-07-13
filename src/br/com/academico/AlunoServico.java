@@ -13,6 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import br.com.academico.dao.CursoDao;
 import br.com.academico.model.CursoModel;
 @Path("aluno")
 public class AlunoServico {
@@ -43,10 +44,11 @@ public class AlunoServico {
 		/*CursoModel curso =  new CursoDao().getCurso(1); // teste
 		curso.setNomeCurso(curso.getNomeCurso());
 		*/
+		CursoModel curso =  new CursoDao().getCurso(2);
 		
 
 		
-		return null;
+		return curso;
 	}
 
 	@POST
@@ -63,7 +65,7 @@ public class AlunoServico {
 		//jpa = new JPAUtil();	
 		//em = jpa.getEntityManager();
 		em.getTransaction().begin();
-		CursoModel curso = em.find(CursoModel.class, 1);
+		CursoModel curso = em.find(CursoModel.class, 2);
 		em.getTransaction().commit();
 		em.close();
 

@@ -2,7 +2,7 @@
 
 <!--  unidade de persistencia com o nome financas  -->
 
-<persistence-unit name="academico">
+<persistence-unit name="academicodb">
 
 <!--  Implementação do JPA, no nosso caso Hibernate  -->
 <provider>org.hibernate.ejb.HibernatePersistence</provider>
